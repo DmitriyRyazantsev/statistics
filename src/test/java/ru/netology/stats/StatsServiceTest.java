@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 class StatsServiceTest {
     @Test
 
-    public void testsum_all_sale() {
+    public void testsumAllSale() {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
@@ -18,11 +18,11 @@ class StatsServiceTest {
 
     @Test
 
-    public void testaverage_sales() {
+    public void testaverageSales() {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        long actual = service.average_sales(sales);
+        long actual = service.averageSales(sales);
         long expected = 180 / 12;
 
         Assertions.assertEquals(actual, expected);
@@ -54,11 +54,11 @@ class StatsServiceTest {
 
     @Test
 
-    public void testbelow_average() {
+    public void testbelowAverage() {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        long actual = service.below_average(sales);
+        long actual = service.belowAverage(sales);
         long expected = 5;
 
         Assertions.assertEquals(expected, actual);
@@ -66,11 +66,11 @@ class StatsServiceTest {
 
     @Test
 
-    public void testabove_average() {
+    public void testaboveAverage() {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        long actual = service.below_average(sales);
+        long actual = service.belowAverage(sales);
         long expected = 5;
 
         Assertions.assertEquals(expected, actual);
